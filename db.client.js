@@ -2,7 +2,6 @@ const { Sequelize } = require('sequelize')
 
 // database
 const sequelize = new Sequelize(
-  'postgres://fakeurl',
   process.env.DB_URL,
   process.env.DB_NAME,
   process.env.DB_USER,

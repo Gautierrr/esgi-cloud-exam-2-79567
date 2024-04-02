@@ -4,11 +4,11 @@ const { Sequelize } = require('sequelize')
 const sequelize = new Sequelize(
   'postgres://fakeurl',
   process.env.DB_URL,
-  process.env.DB_NAME, // Database name
-  process.env.DB_USER, // User
-  process.env.DB_PASSWORD, // Password
-  // ou directement le lien 'internale' ou 'externale'
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
   {
+    host: process.env.DB_HOST,
     dialectOptions: {
       ssl: {
         require: true,
